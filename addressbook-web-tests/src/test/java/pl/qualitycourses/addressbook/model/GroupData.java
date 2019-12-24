@@ -1,4 +1,4 @@
-package pl.qualitycourses.addressbook;
+package pl.qualitycourses.addressbook.model;
 
 public class GroupData {
     private final String name;
