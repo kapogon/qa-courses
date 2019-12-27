@@ -2,7 +2,6 @@ package pl.qualitycourses.addressbook.appmanager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.w3c.dom.html.HTMLBRElement;
 import pl.qualitycourses.addressbook.model.GroupData;
 
 public class GroupHelper extends HelperBase{
