@@ -1,7 +1,5 @@
 package pl.qualitycourses.addressbook.appmanager;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -24,15 +22,15 @@ public class ApplicationManager {
     }
 
     public void init() {
-        if(browser.equals(BrowserType.FIREFOX)) {
+        if (browser.equals(BrowserType.FIREFOX)) {
             driver = new FirefoxDriver();
-        } else if (browser.equals(BrowserType.CHROME)){
+        } else if (browser.equals(BrowserType.CHROME)) {
             driver = new ChromeDriver();
-        } else if (browser.equals(BrowserType.IE)){
+        } else if (browser.equals(BrowserType.IE)) {
             driver = new InternetExplorerDriver();
         }
 
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
         driver.get("http://localhost/addressbook/group.php");
         groupHelper = new GroupHelper(driver);
         contactHelper = new ContactHelper(driver);
@@ -49,7 +47,7 @@ public class ApplicationManager {
         return groupHelper;
     }
 
-    public ContactHelper getContactHelper(){
+    public ContactHelper getContactHelper() {
         return contactHelper;
     }
 
